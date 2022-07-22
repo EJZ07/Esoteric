@@ -1,14 +1,14 @@
 from flask import Flask
-from flask import session, abort, redirect, url_for, request, render_template, flash
+from flask import  redirect, url_for, request, render_template, flash
 from flask_sqlalchemy import SQLAlchemy
 
-from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
+from flask_login import login_user, LoginManager, login_required, logout_user, current_user
 
 from werkzeug.security import generate_password_hash, check_password_hash
-from markupsafe import escape
 
-from .models import User
 from . import db
+from .models import User
+
 
 db = SQLAlchemy()
 
@@ -22,8 +22,6 @@ db.init_app(app)
 login_manager = LoginManager()
 login_manager.login_view = 'login'
 login_manager.init_app(app)
-
-from .models import User
 
 @app.route('/')
 def index():
@@ -91,4 +89,4 @@ def logout():
     return redirect(url_for('index'))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port='5000')
