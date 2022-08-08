@@ -6,15 +6,14 @@ The HL7 application doesn’t need any permissions outside of its own Postgres d
 
 Postgres must be installed locally in order to run the development application 
 
-Change 'ENV' to ='dev'
+Change 'ENV' to ='dev' <br />
 <img width="731" alt="image" src="https://user-images.githubusercontent.com/59446532/183456297-e0ba8f7d-a98f-4582-9d08-28ca697c247a.png">
 
 Once you've installed pgadmin, right click on a server on the left hand side and click "Register...server" <br />
 Name: 'quest-users' <br />
 password: 123456 <br />
 host: localhost <br />
-
-Click save
+Click save <br />
 <img width="766" alt="image" src="https://user-images.githubusercontent.com/59446532/183457426-48fa719e-47ca-4aa0-b529-7a6e3d4d64cf.png">
 ## Dependencies
 run command "pip install -r requirements.txt"
